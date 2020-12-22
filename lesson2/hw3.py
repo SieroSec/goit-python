@@ -44,7 +44,6 @@ def calc(a,b,operator):
          #print ("division by zero!")
          return 0
          
-
 # function to check if input is a number
 def isNumber(input):
    if isinstance(input, (float, int)): 
@@ -52,7 +51,7 @@ def isNumber(input):
    else:
       return False
 
-# calculate array
+# Calculate Array
 def final_calculation(input):
    debugPrintValues = True
    res=0.0
@@ -70,8 +69,6 @@ def final_calculation(input):
    print (f"RESULT: {res}")
 
 # main program cycle
-# mainarray = ['+', 1.0, '+', 5.0, '/', 2.0, '*', 6.0, '-', 4.0, '/', 8.0, '+', 10.0, '*', 5.0] # 58.75
-# final_calculation(mainarray)
 while userInput != -1:
    userInput = user_input()
 
