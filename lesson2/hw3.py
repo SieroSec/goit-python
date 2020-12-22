@@ -90,9 +90,9 @@ while userInput != -1:
       continue
    
    elif (userInput == "="):
-      if len(mainArray < 3):
+      if len(mainArray) < 3:
          continue
-      elif len(mainArray >= 3):
+      elif len(mainArray) >= 3:
          final_calculation(mainArray)
          break
 
