@@ -41,9 +41,9 @@ def calc(a,b,operator):
          if debugPrintValues: print (f"{a} / {b} = {a/b}")
          return a/b
       else:
-         print ("division by zero!")
-         exit(1)
+         #print ("division by zero!")
          return 0
+         
 
 # function to check if input is a number
 def isNumber(input):
@@ -79,10 +79,14 @@ while userInput != -1:
    # isNumber(mainArray[-1] is used to check for previous array element.
    # Array is initialized with '+' char, so on first input 
    # not isNumber(mainArray[-1] will always be False.
+   if (userInput == 0 or userInput == 0.0) and mainArray[-1] == '/':
+      print ("division by zero is not allowed.")
+      print (mainArray[1:])
+      continue
 
-   if isNumber(userInput) and not isNumber(mainArray[-1]):
+   elif isNumber(userInput) and not isNumber(mainArray[-1]):
       mainArray.append(userInput)
-      print (mainArray)
+      print (mainArray[1:])
       continue
    
    elif (userInput == "="):
@@ -92,21 +96,22 @@ while userInput != -1:
 
    elif (userInput == "+") and isNumber(mainArray[-1]):
       mainArray.append("+")
-      print (mainArray)
+      print (mainArray[1:])
       continue
    
    elif (userInput == "-") and isNumber(mainArray[-1]):
       mainArray.append("-")
-      print (mainArray)
+      print (mainArray[1:])
       continue
    
    elif (userInput == "*") and isNumber(mainArray[-1]):
       mainArray.append("*")
-      print (mainArray)
+      print (mainArray[1:])
       continue
    
    elif (userInput == "/") and isNumber(mainArray[-1]):
       mainArray.append("/")
-      print (mainArray)
+      print (mainArray[1:])
       continue
 
+   
