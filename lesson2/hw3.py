@@ -79,7 +79,7 @@ while userInput != -1:
    # isNumber(mainArray[-1] is used to check for previous array element.
    # Array is initialized with '+' char, so on first input 
    # not isNumber(mainArray[-1] will always be False.
-   if (userInput == 0 or userInput == 0.0) and mainArray[-1] == '/':
+   if userInput == 0 and mainArray[-1] == '/':
       print ("division by zero is not allowed.")
       print (mainArray[1:])
       continue
@@ -90,9 +90,11 @@ while userInput != -1:
       continue
    
    elif (userInput == "="):
-      # add: remove 1st element
-      final_calculation(mainArray)
-      break
+      if len(mainArray < 3):
+         continue
+      elif len(mainArray >= 3):
+         final_calculation(mainArray)
+         break
 
    elif (userInput == "+") and isNumber(mainArray[-1]):
       mainArray.append("+")
