@@ -23,7 +23,7 @@ unknown_files = []
 
 for file in files:
    file_extension = (file[file.index("."):])[1:] # [1:] - removes dot
-   print(file_extension)
+   
    # create a set with all extensions of the files in the folder
    found_ext.add(file_extension)
 
@@ -39,4 +39,4 @@ for file in files:
       found_ext.add(file_extension)
       unknown_files.append(file)
 
-print(f"photos: {photos}\n\n videos: {videos}\n\n music files: {music}\n\n documents: {documents}\n\n other: {unknown_files}\n\n Found extentions: {found_ext}")
+print(f"Photo files: {photos}\n\nVideo files: {videos}\n\nMusic files: {music}\n\nDocuments: {documents}\n\nOther Files: {unknown_files}\n\nFound extentions: {found_ext}")
